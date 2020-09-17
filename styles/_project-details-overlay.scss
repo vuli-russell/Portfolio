@@ -1,0 +1,180 @@
+.project-details-overlay {
+    position: fixed;
+    top: 50%;
+    height: 0px;
+    width: 100%;
+    transition: 0.4s linear;
+
+    &.shown {
+        top: 0;
+        height: 100vh;
+        background-color: rgba($overlay-primary-color, 0.8);
+
+
+        @supports (backdrop-filter: blur()) {
+            backdrop-filter: blur(5px);
+            background-color: transparent;
+        }
+    }
+}
+
+.project-details {
+    position: fixed;
+    top: 50%;
+    height: 0;
+    width: 90vw;
+    margin: 5vh 5vw;
+    transition: 0.4s linear;
+    border: 0px solid $overlay-secondary-color;
+    background-color: $overlay-primary-color;
+    overflow: hidden;
+    color: $overlay-secondary-color;
+    text-align: center;
+
+    &.shown {
+        top: 0;
+        height: 90vh;
+        border-width: 2px;
+        overflow: hidden;
+        
+    }
+
+    .mouse-project-details-close {
+        background-color: $overlay-primary-color;
+        color: $overlay-secondary-color;
+        position: relative;
+        left: calc(90vw - 44px);
+        height: 40px;
+        width: 40px;
+        font-size: 25px;
+        border: none;
+    }
+
+    .project-details-content-container {
+        position: relative;
+        height: calc(90vh - 4px - 30px);
+        overflow-y: auto;
+        padding: 2vw 5vw;
+
+        img {
+            object-fit: cover;
+            max-height: 30vh;
+            border: 1px solid $overlay-secondary-color;
+            width: 100%;
+        }
+
+        p {
+            text-align: justify;
+            margin: 20px 0;
+        }
+
+        h3 {
+            margin: 10px 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 5px 0;
+
+            li {
+                margin: 5px 0;
+                font-size: $text-size;
+            }
+        }
+
+        a {
+            color: $overlay-secondary-color;
+            text-decoration: none;     
+
+            &::after {
+                content: attr(content);
+                    //seems a bit dodgy, cant make it align properly -> https://jsfiddle.net/mvxquLog/1/
+                vertical-align: -20%;
+            }
+
+            i {
+                margin: 0px 10px;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    .touch-project-details-close {
+        background-color: $overlay-secondary-color;
+        position: sticky;
+        bottom: 0;
+        height: 40px;
+        width: calc(90vw - 4px);
+        font-size: 25px;
+        border: 2px solid $overlay-primary-color;
+
+        >i {
+            animation-name: bounce;
+            animation-timing-function: linear;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+
+
+
+@media(min-width: $tablet-breakpoint){
+    .project-details-overlay .project-details { 
+
+        .mouse-project-details-close {
+            display: inherit;
+        }
+
+        .project-details-content-container {   
+            img {
+                height: 50vh;
+            }
+
+            ul li {
+                font-size: $text-size * 1.2;
+                margin: 10px 0;
+            }
+        }
+    }
+}
+
+@media(min-width: $computer-breakpoint){
+    // add hover to links. remove bottom close button
+
+    .project-details-overlay .project-details{
+
+        .touch-project-details-close {
+            display: none;
+        }
+
+        .project-details-content-container{
+
+            height: calc(90vh - 4px); 
+    
+            a {
+                transition: 0.5s ease;
+                padding: 5px 10px;
+        
+                &::after {
+                    content: attr(content);
+                    width: 0px;
+                    display: inline-block;
+                    overflow: hidden;
+                    transition: 0.5s ease;
+                }
+        
+                &:hover::after {
+                    width: 50px;
+                    color: $overlay-primary-color;
+        
+                }
+        
+                &:hover {
+                    background-color: $overlay-secondary-color;
+                    color: $overlay-primary-color;
+                }
+            }
+        } 
+    } 
+}

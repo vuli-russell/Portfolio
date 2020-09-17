@@ -1,0 +1,82 @@
+/* projects section for small screen - flex */
+.project-cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+
+    /* project cards all the same size for mobile */
+    >article {
+        width: 100%;
+        max-width: 300px;
+        overflow: hidden;
+        margin: 20px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        border: 2px solid $secondary-color;
+
+        div {
+
+            background-color: $primary-color;
+            color: $secondary-color;
+            transition: 0.4s ease;
+
+            hr {
+                width: 0%;
+                border: 0px solid white;
+                transition: width 0.4s ease-in;
+            }
+
+            h3 {
+                width: 100%;
+                font-weight: 100;
+            }
+        }
+    }
+
+    >#project1 {
+        background-color: #cddc39;
+    }
+
+    >#project2 {
+        background-color: #03a9f4;
+    }
+
+    >#project3 {
+        background-color: #e91e63;
+    }
+}
+
+@media (min-width:$tablet-breakpoint) {
+    main>section>.project-cards-container {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas:
+            'a a a b b b'
+            'c c c c c c';
+        gap: 40px;
+        margin: 40px 0;
+
+        article {
+            width: auto;
+            max-width: none;
+            margin: 0;
+        }
+
+        #project1 {
+            grid-area: a;
+        }
+
+        #project2 {
+            grid-area: b;
+        }
+
+        #project3 {
+            grid-area: c;
+        }
+    }
+}

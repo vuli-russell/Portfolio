@@ -1,0 +1,27 @@
+$primary-color: #262526;
+//text
+$secondary-color: #f2f2f2;
+//accents
+$tertiary-color: #ff7b00;
+//project overlays
+$overlay-primary-color: black;
+$overlay-secondary-color: white;
+
+$title-size: 80px;
+//h2
+$section-heading-size: 50px;
+//h3
+$sub-heading-size: 20px;
+//p/a
+$text-size: 15px;
+//nav
+$nav-text-size: 20px;
+
+//media query breakpoints
+
+//reduces sizes for small screen devices
+$large-mobile-breakpoint: 425px;
+//grid layout and shows top left close button on grid overlay
+$tablet-breakpoint: 768px;
+//ads hover effects to buttons
+$computer-breakpoint: 950px;

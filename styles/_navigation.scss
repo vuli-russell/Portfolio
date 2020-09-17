@@ -1,0 +1,93 @@
+nav {
+    .nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 0;
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .nav-menu {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        color: $primary-color;
+        background-color: $secondary-color;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.4s ease-in;
+        transform: scaleY(0) scaleX(0);
+        transform-origin: 100% 100% 0;
+
+        a {
+            padding: 10px 20px;
+            color: $primary-color;
+            text-decoration: none;
+            width: 100%;
+            display: block;
+            font-size: $nav-text-size;
+        }
+
+        &.nav-shown {
+            transform: scaleY(1) scaleX(1);
+        }
+    }
+
+    .nav-icon-container {
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        right: -70px;
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+        color: $primary-color;
+        border-radius: 20%;
+        background-color: $secondary-color;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s ease;
+
+        &.shown {
+            right: -0px;
+        }
+    }
+
+    .location-dot{
+        position: absolute;
+        left: -15px;
+        top: 0px;
+        height: 30px;
+        width: 30px;
+        border-radius: 20%;
+        background: linear-gradient(90deg, rgba(242,242,242,1) 50%, rgba(38,37,38,1) 50%);
+        transition: 0.2s linear;
+        border: 1px solid $secondary-color;
+        display: none;
+        
+    }
+}
+
+@media (min-width:$large-mobile-breakpoint){
+    nav .nav-menu a {
+        font-size: $nav-text-size * 1.5;
+    }
+}
+
+@media (min-width:$computer-breakpoint){
+    nav{
+        .nav-menu a {
+            @include rotate-on-hover;
+        }
+
+        .location-dot {
+            display: initial;
+        }
+    }
+}

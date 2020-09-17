@@ -1,0 +1,90 @@
+body {
+
+    
+
+    header {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+
+    main {
+        
+        padding: 0vw 15vw;
+
+        section {
+            /* section min height sized to screen with hr at top and bottom */
+            min-height: calc(100vh - 40px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    hr {
+        color: $secondary-color;
+        margin: 10px auto;
+    }
+}
+
+
+
+@media (min-width:$computer-breakpoint) {
+
+    header {
+        max-width: max(80vw, calc(100vw - 225px));
+    }
+
+    main {
+        max-width: max(80vw, calc(100vw - 225px));
+        padding: 0 5vw;
+
+        section .project-cards-container article:hover {
+
+            div {
+                color: $primary-color;
+                background-color: $secondary-color;
+                font-size: 28px;
+                border: 1px solid black;
+
+                hr {
+                    width: 80%;
+                    border: 1px solid black;
+                }
+            }
+
+        }
+    }
+
+    nav {
+        position: fixed;
+        width: min(20vw, 225px);
+        height: 100vh;
+        right: 0;
+        top: 0;
+        margin: 0;
+        padding: 0;
+
+        .nav-overlay {
+            display: none;
+
+        }
+
+        .nav-icon-container,
+        .nav-icon-container.shown {
+            display: none;
+        }
+
+        .nav-menu,
+        .nav-menu.nav-shown {
+            position: relative;
+            margin: 0;
+            transform: none;
+            height: 100%;
+        }
+    }
+}
