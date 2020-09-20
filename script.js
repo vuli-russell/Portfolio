@@ -76,7 +76,7 @@ document.addEventListener("scroll",(e)=>{
             swipe(h2,100*(1-((y-h/2)/(h/2))),"#f2f2f2","#262526");
         };
         if(y<h/2-50&y>0-50){
-            swipe(h2,20+(100*((y/(h/2)))),"#f2f2f2","#ff7b00");
+            swipe(h2,20+(100*((y/(h/2)))),"#f2f2f2","#006daa");
         };
     });
 
@@ -112,7 +112,6 @@ mobileNavIcon.addEventListener("click",openNav);
 
 window.addEventListener("resize",(e)=>{
     if(e.target.innerWidth>=950){
-        console.log(e.target.innerWidth);
         closeNav();
         updateNavDot();
     };
@@ -146,6 +145,10 @@ const closeProjectDetails = () => {
     enableBodyScroll(); 
 };
 
+document.addEventListener('click',(e)=>{
+    console.log(e.target);
+})
+
 projectDetailsCloseButtons.forEach((button)=>{
     button.addEventListener("click", (e)=>{
         closeProjectDetails();
@@ -153,7 +156,6 @@ projectDetailsCloseButtons.forEach((button)=>{
 });
 
 //close on click outside details box
-// projectDetailsOverlay.addEventListener("click", closeProjectDetails);
 projectDetailsOverlay.addEventListener("click", (e) => {
     if(e.srcElement.classList.contains("project-details-overlay")){
         closeProjectDetails();
@@ -165,14 +167,16 @@ projectDetailsOverlay.addEventListener("click", (e) => {
 //element for canvas
 const canvas = document.querySelector("canvas");
 
-canvas.width = document.body.clientWidth;
-canvas.height = window.innerHeight;
+const header = document.querySelector('header');
+canvas.width = header.clientWidth;
+canvas.height = header.clientHeight;
 
 
 //resize canvas
+
 window.addEventListener("resize",function(){
-    canvas.width = document.body.clientWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = header.clientWidth;
+    canvas.height = header.clientHeight;
     generateLines();
 });
 
@@ -273,8 +277,10 @@ const mouse = {
 };
 
 document.addEventListener("mousemove",(e)=>{
-    mouse.x = e.x;
-    mouse.y = e.y;
+    xOffset = canvas.getBoundingClientRect().x;
+    yOffset = canvas.getBoundingClientRect().y;
+    mouse.x = e.x - xOffset;
+    mouse.y = e.y - yOffset;
 })
 
 lines = [];

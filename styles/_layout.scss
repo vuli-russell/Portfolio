@@ -1,14 +1,12 @@
 body {
 
-    
-
     header {
         height: 100vh;
-        width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        align-items: center;
         position: relative;
+        padding: 0vw 15vw;
     }
 
     main {
@@ -36,12 +34,15 @@ body {
 @media (min-width:$computer-breakpoint) {
 
     header {
+        
         max-width: max(80vw, calc(100vw - 225px));
+        margin-left: min(20vw, 225px);
     }
 
     main {
         max-width: max(80vw, calc(100vw - 225px));
-        padding: 0 5vw;
+        
+        margin-left: min(20vw, 225px);
 
         section .project-cards-container article:hover {
 
@@ -64,7 +65,7 @@ body {
         position: fixed;
         width: min(20vw, 225px);
         height: 100vh;
-        right: 0;
+        left: 0;
         top: 0;
         margin: 0;
         padding: 0;

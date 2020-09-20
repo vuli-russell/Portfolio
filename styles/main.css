@@ -117,19 +117,20 @@ header canvas {
   z-index: -1;
 }
 header h1 {
+  text-align: left;
   font-family: neon;
   font-weight: 100;
-  bottom: 50vh;
-  margin-left: 2vw;
-  color: #ff7b00;
-  text-shadow: 0 0 10px #ff7b00, 0 0 10px #ff7b00;
+  padding-top: 20vh;
+  color: #006daa;
+  text-shadow: 0 0 10px #006daa, 0 0 10px #006daa;
 }
 header h1.lights-on {
-  text-shadow: 0 0 10px #ff7b00, 0 0 30px #ff7b00, 0 0 50px #ff7b00, 0 0 70px #ff7b00, 0 0 90px #ff7b00;
+  text-shadow: 0 0 10px #006daa, 0 0 30px #006daa, 0 0 50px #006daa, 0 0 70px #006daa, 0 0 90px #006daa;
 }
 header > a {
   position: absolute;
   bottom: 0;
+  left: 0px;
   width: 100%;
   text-align: center;
   text-decoration: none;
@@ -210,10 +211,11 @@ nav .location-dot {
   top: 0px;
   height: 30px;
   width: 30px;
-  border-radius: 20%;
-  background: linear-gradient(90deg, #f2f2f2 50%, #262526 50%);
+  border-radius: 50%;
+  background-color: #006daa;
   transition: 0.2s linear;
   border: 1px solid #f2f2f2;
+  border-left: none;
   display: none;
 }
 
@@ -270,11 +272,11 @@ nav .location-dot {
 }
 body header {
   height: 100vh;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   position: relative;
+  padding: 0vw 15vw;
 }
 body main {
   padding: 0vw 15vw;
@@ -295,11 +297,12 @@ body hr {
 @media (min-width: 950px) {
   header {
     max-width: max(80vw, calc(100vw - 225px));
+    margin-left: min(20vw, 225px);
   }
 
   main {
     max-width: max(80vw, calc(100vw - 225px));
-    padding: 0 5vw;
+    margin-left: min(20vw, 225px);
   }
   main section .project-cards-container article:hover div {
     color: #262526;
@@ -316,7 +319,7 @@ body hr {
     position: fixed;
     width: min(20vw, 225px);
     height: 100vh;
-    right: 0;
+    left: 0;
     top: 0;
     margin: 0;
     padding: 0;
@@ -358,9 +361,17 @@ nav .nav-menu.nav-shown {
   border: 2px solid #f2f2f2;
 }
 .project-cards-container > article div {
+  position: relative;
   background-color: #262526;
   color: #f2f2f2;
   transition: 0.4s ease;
+}
+.project-cards-container > article div i {
+  position: absolute;
+  right: 0px;
+  height: 20px;
+  top: calc(50% - 20px);
+  font-size: 40px;
 }
 .project-cards-container > article div hr {
   width: 0%;
@@ -430,7 +441,7 @@ nav .nav-menu.nav-shown {
   width: 90vw;
   margin: 5vh 5vw;
   transition: 0.4s linear;
-  border: 0px solid white;
+  border: 0px solid #006daa;
   background-color: black;
   overflow: hidden;
   color: white;
@@ -451,18 +462,23 @@ nav .nav-menu.nav-shown {
   width: 40px;
   font-size: 25px;
   border: none;
+  z-index: 2;
 }
 .project-details .project-details-content-container {
   position: relative;
-  height: calc(90vh - 4px - 30px);
+  height: calc(90vh - 4px - 30px - 10px);
   overflow-y: auto;
   padding: 2vw 5vw;
+  top: -40px;
 }
 .project-details .project-details-content-container img {
   object-fit: cover;
   max-height: 30vh;
-  border: 1px solid white;
+  border: 2px solid #006daa;
   width: 100%;
+}
+.project-details .project-details-content-container hr {
+  border: 1px solid #006daa;
 }
 .project-details .project-details-content-container p {
   text-align: justify;

@@ -5,16 +5,14 @@ header {
         top: 0;
         left: 0;
         background-color: $primary-color;
-        // height: 100vh; //THIS BREAKS CANVAS
-        // width: 100%;
         z-index: -1;
     }
     
     h1 {
+        text-align: left;
         font-family: neon;
         font-weight: 100;
-        bottom: 50vh;
-        margin-left: 2vw;
+        padding-top: 20vh;
         color: $tertiary-color;
         text-shadow: 
         0 0 10px $tertiary-color,
@@ -35,6 +33,7 @@ header {
     >a {
         position: absolute;
         bottom: 0;
+        left: 0px;
         width: 100%;
         text-align: center;
         text-decoration: none;
