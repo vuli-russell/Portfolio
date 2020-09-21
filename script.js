@@ -145,12 +145,9 @@ const closeProjectDetails = () => {
     enableBodyScroll(); 
 };
 
-document.addEventListener('click',(e)=>{
-    console.log(e.target);
-})
 
 projectDetailsCloseButtons.forEach((button)=>{
-    button.addEventListener("click", (e)=>{
+    button.addEventListener("click", ()=>{
         closeProjectDetails();
     });    
 });
