@@ -169,16 +169,6 @@ generateProjectOverlays(projects,projectDetailsOverlay);
 //======================================================================================================
 
 //page behaviors
-//flickering on page load
-const flicker = (element) => {
-    element.classList.toggle("lights-on");
-};
-
-const heading = document.querySelector("h1");
-
-for(i=0;i<11;i++){
-    setTimeout(flicker,Math.random()*5000,heading);
-};
 
 //h2 text scrolling function
 sectionHeadings = document.querySelectorAll("h2");
