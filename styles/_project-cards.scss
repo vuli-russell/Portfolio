@@ -45,18 +45,6 @@
             }
         }
     }
-
-    >#project1 {
-        background-color: #cddc39;
-    }
-
-    >#project2 {
-        background-color: #03a9f4;
-    }
-
-    >#project3 {
-        background-color: #e91e63;
-    }
 }
 
 @media (min-width:$tablet-breakpoint) {
@@ -73,18 +61,6 @@
             width: auto;
             max-width: none;
             margin: 0;
-        }
-
-        #project1 {
-            grid-area: a;
-        }
-
-        #project2 {
-            grid-area: b;
-        }
-
-        #project3 {
-            grid-area: c;
         }
     }
 }

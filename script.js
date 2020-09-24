@@ -1,3 +1,165 @@
+//Project cards and overlays generation==================================
+
+//project info
+//copy object. Grid areas must be added to definition in the css (_project-cards.scss media query ~ line 54)
+
+const calculatorProject = {
+    id: 'calculator',
+    title : 'JS Calculator',
+    imageSrc : 'https://picsum.photos/500/500',
+    description: 'A basic calculator built using html Sass/CSS and javascript. Performs basic maths according to BODMAS and can accept variables as inputs.',
+    techUsed: [['html','fa-html5'],['sass','fa-sass'],['javascript','fa-js']],
+    siteLink : '...',
+    githubLink: '...',
+    gridArea: 'a',
+    //placeholder
+    color: '#cddc39'
+};
+
+const dummyProjectB = {
+    id: 'dummyB',
+    title : 'Dummy Project B',
+    imageSrc : 'https://picsum.photos/500/500',
+    description: 'some text ',
+    techUsed: [['html','fa-html5'],['css','fa-css3'],['javascript','fa-js']],
+    siteLink : '...',
+    githubLink: '...',
+    gridArea: 'b',
+    color: '#03a9f4'
+};
+
+const dummyProjectC = {
+    id: 'dummyC',
+    title : 'Dummy Project C',
+    imageSrc : 'https://picsum.photos/500/500',
+    description: 'some text ',
+    techUsed: [['html','fa-html5'],['css','fa-css3'],['javascript','fa-js']],
+    siteLink : '...',
+    githubLink: '...',
+    gridArea: 'c',
+    color: '#e91e63'
+};
+
+
+const projects = [calculatorProject,dummyProjectB,dummyProjectC];
+
+//html generation==============================================================================
+
+//project cards
+const projectCardsContainer = document.querySelector('.project-cards-container');
+
+const generateProjectCards = (projectArray,container) => {
+    projectArray.forEach(project => {
+        const article = document.createElement('article');
+        article.id =project.id;
+        article.style.backgroundColor = project.color;
+        article.style.gridArea = project.gridArea;
+        const div = document.createElement('div');
+        const hr1 = document.createElement('hr');
+        const h3 = document.createElement ('h3');
+        h3.innerText = project.title;
+        const i = document.createElement('i');
+        i.classList.add('fas', 'fa-angle-right');
+        const hr2 = document.createElement('hr');
+
+        div.append(hr1,h3,i,hr2);
+        article.append(div);
+        container.append(article);
+    });
+};
+
+//project overlay info
+const projectDetailsOverlay = document.querySelector(".project-details-overlay");
+
+const generateProjectOverlays = (projectArray,container) => {
+    projectArray.forEach(project => {
+
+        //article
+        const article = document.createElement('article');
+        article.classList.add('project-details');
+        
+        //mouse close button
+        const mouseClose = document.createElement('button');
+        mouseClose.classList.add("mouse-project-details-close");
+        const mouseIcon = document.createElement('i');
+        mouseIcon.classList.add('fas', 'fa-times');
+        mouseClose.append(mouseIcon);
+
+        //div
+        const div = document.createElement('div');
+        div.classList.add('project-details-content-container');
+
+        //img
+        const img = document.createElement('img');
+        img.setAttribute('src',project.imageSrc);
+
+        //p
+        const p = document.createElement('p');
+        p.innerText = project.description;
+
+        //1st hr
+        const hr1 = document.createElement('hr');
+
+        //h3
+        const h3 = document.createElement('h3');
+        h3.innerText = 'Tech Used';
+
+        //ul
+        const ul  = document.createElement('ul')
+        
+        project.techUsed.forEach(tech=>{
+            const li = document.createElement('li');
+            li.innerText = tech[0];
+            const i = document.createElement('i');
+            i.classList.add('fab',tech[1]);
+            li.append(i);
+            ul.append(li);
+        });
+
+        //github link
+        const githubLink = document.createElement('a');
+        githubLink.setAttribute('href',project.githubLink);
+        githubLink.setAttribute('target','blank');
+        githubLink.setAttribute('content', 'code');
+        
+        const githubIcon = document.createElement('i');
+        githubIcon.classList.add('fab', 'fa-github');
+        githubLink.append(githubIcon);
+
+        //site link
+        const siteLink = document.createElement('a');
+        siteLink.setAttribute('href',project.siteLink);
+        siteLink.setAttribute('target','blank');
+        siteLink.setAttribute('content', 'site');
+        
+        const siteIcon = document.createElement('i');
+        siteIcon.classList.add('fas', 'fa-eye');
+        siteLink.append(siteIcon);
+
+        //2nd hr
+        const hr2 = document.createElement('hr');
+
+        //touch close button
+        const touchClose = document.createElement('button');
+        touchClose.classList.add("touch-project-details-close");
+        const touchIcon = document.createElement('i');
+        touchIcon.classList.add('fas', 'fa-angle-up');
+        touchClose.append(touchIcon);
+
+        div.append(img,p,hr1,h3,ul,githubLink,siteLink,hr2);
+        article.append(mouseClose,div,touchClose);
+        container.append(article);
+    });
+};
+
+//call functions to generate html ================================================================================
+
+generateProjectCards(projects,projectCardsContainer);
+generateProjectOverlays(projects,projectDetailsOverlay);
+
+//======================================================================================================
+
+//page behaviors
 //flickering on page load
 const flicker = (element) => {
     element.classList.toggle("lights-on");
@@ -119,7 +281,6 @@ window.addEventListener("resize",(e)=>{
 
 //open project details overlay
 const projectCards = document.querySelectorAll(".project-cards-container > article");
-const projectDetailsOverlay = document.querySelector(".project-details-overlay");
 const projectDetails = document.querySelectorAll(".project-details");
 
 const openProjectDetails = (i) => {
@@ -309,3 +470,4 @@ const animate=function(){
 };
 
 animate();
+
