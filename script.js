@@ -6,7 +6,8 @@
 const calculatorProject = {
     id: 'calculator',
     title : 'JS Calculator',
-    imageSrc : 'https://picsum.photos/500/500',
+    overlayImageSrc : './img/project-images/calculator/overlay.png',
+    cardImageSrc: './img/project-images/calculator/card.png',
     description: 'A basic calculator built using html Sass/CSS and javascript. Performs basic maths according to BODMAS and can accept variables as inputs.',
     techUsed: [['html','fa-html5'],['sass','fa-sass'],['javascript','fa-js']],
     siteLink : 'https://calculator.vulirussell.io/',
@@ -20,11 +21,13 @@ const dummyProjectB = {
     id: 'dummyB',
     title : 'Dummy Project B',
     imageSrc : 'https://picsum.photos/500/500',
+    cardImageSrc: null,
     description: 'some text ',
     techUsed: [['html','fa-html5'],['css','fa-css3'],['javascript','fa-js']],
     siteLink : '...',
     githubLink: '...',
     gridArea: 'b',
+    //placeholder
     color: '#03a9f4'
 };
 
@@ -32,11 +35,13 @@ const dummyProjectC = {
     id: 'dummyC',
     title : 'Dummy Project C',
     imageSrc : 'https://picsum.photos/500/500',
+    cardImageSrc: null,
     description: 'some text ',
     techUsed: [['html','fa-html5'],['css','fa-css3'],['javascript','fa-js']],
     siteLink : '...',
     githubLink: '...',
     gridArea: 'c',
+    //placeholder
     color: '#e91e63'
 };
 
@@ -52,7 +57,11 @@ const generateProjectCards = (projectArray,container) => {
     projectArray.forEach(project => {
         const article = document.createElement('article');
         article.id =project.id;
-        article.style.backgroundColor = project.color;
+        if(project.cardImageSrc){
+            article.style.backgroundImage = `url(${project.cardImageSrc})`;
+        }else{
+            article.style.backgroundColor = project.color;
+        }
         article.style.gridArea = project.gridArea;
         const div = document.createElement('div');
         const hr1 = document.createElement('hr');
@@ -91,7 +100,7 @@ const generateProjectOverlays = (projectArray,container) => {
 
         //img
         const img = document.createElement('img');
-        img.setAttribute('src',project.imageSrc);
+        img.setAttribute('src',project.overlayImageSrc);
 
         //p
         const p = document.createElement('p');

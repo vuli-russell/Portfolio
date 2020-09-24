@@ -1,8 +1,4 @@
 @font-face {
-  font-family: neon;
-  src: url("../fonts/neon.ttf");
-}
-@font-face {
   font-family: elephant-outline;
   src: url("../fonts/elephant-outline.otf");
 }
@@ -117,15 +113,14 @@ header canvas {
   z-index: -1;
 }
 header h1 {
-  text-align: left;
-  font-family: neon;
+  font-family: elephant-outline;
   font-weight: 100;
-  padding-top: 20vh;
+  margin-top: 20vh;
   color: #006daa;
-  text-shadow: 0 0 10px #006daa, 0 0 10px #006daa;
-}
-header h1.lights-on {
-  text-shadow: 0 0 10px #006daa, 0 0 30px #006daa, 0 0 50px #006daa, 0 0 70px #006daa, 0 0 90px #006daa;
+  background-color: #f2f2f2;
+  text-align: right;
+  padding-right: 30px;
+  border-left: 15vw solid #006daa;
 }
 header > a {
   position: absolute;
@@ -274,9 +269,7 @@ body header {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   position: relative;
-  padding: 0vw 15vw;
 }
 body main {
   padding: 0vw 15vw;
@@ -455,6 +448,7 @@ nav .nav-menu.nav-shown {
 }
 .project-details .project-details-content-container img {
   object-fit: cover;
+  object-position: top left;
   max-height: 35vh;
   border: 2px solid #006daa;
   width: 100%;

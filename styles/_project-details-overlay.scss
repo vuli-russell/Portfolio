@@ -60,9 +60,11 @@
 
         img {
             object-fit: cover;
+            object-position: top left;
             max-height: 35vh;
             border: 2px solid $overlay-tertiary-color;
             width: 100%;
+            
         }
 
         hr {

@@ -9,25 +9,14 @@ header {
     }
     
     h1 {
-        text-align: left;
-        font-family: neon;
+        font-family: elephant-outline;
         font-weight: 100;
-        padding-top: 20vh;
+        margin-top: 20vh;
         color: $tertiary-color;
-        text-shadow: 
-        0 0 10px $tertiary-color,
-        0 0 10px $tertiary-color;
-
-
-        //for flickering effect
-        &.lights-on {
-            text-shadow: 
-            0 0 10px $tertiary-color,
-            0 0 30px $tertiary-color,
-            0 0 50px $tertiary-color,
-            0 0 70px $tertiary-color,
-            0 0 90px $tertiary-color
-        }
+        background-color: $secondary-color;
+        text-align: right;
+        padding-right: 30px;
+        border-left: 15vw solid $tertiary-color;
     }
 
     >a {
