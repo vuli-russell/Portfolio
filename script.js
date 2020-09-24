@@ -9,8 +9,8 @@ const calculatorProject = {
     imageSrc : 'https://picsum.photos/500/500',
     description: 'A basic calculator built using html Sass/CSS and javascript. Performs basic maths according to BODMAS and can accept variables as inputs.',
     techUsed: [['html','fa-html5'],['sass','fa-sass'],['javascript','fa-js']],
-    siteLink : '...',
-    githubLink: '...',
+    siteLink : 'https://calculator.vulirussell.io/',
+    githubLink: 'https://github.com/vuli-russell/JS-calculator',
     gridArea: 'a',
     //placeholder
     color: '#cddc39'
