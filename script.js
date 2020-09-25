@@ -19,7 +19,7 @@ const calculatorProject = {
 
 const dummyProjectB = {
     id: 'dummyB',
-    title : 'Dummy Project B',
+    title : 'Dummy Project',
     imageSrc : 'https://picsum.photos/500/500',
     cardImageSrc: null,
     description: 'some text ',
@@ -33,7 +33,7 @@ const dummyProjectB = {
 
 const dummyProjectC = {
     id: 'dummyC',
-    title : 'Dummy Project C',
+    title : 'Dummy Project',
     imageSrc : 'https://picsum.photos/500/500',
     cardImageSrc: null,
     description: 'some text ',
