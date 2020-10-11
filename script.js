@@ -13,21 +13,20 @@ const calculatorProject = {
     siteLink : 'https://calculator.vulirussell.io/',
     githubLink: 'https://github.com/vuli-russell/JS-calculator',
     gridArea: 'a',
-    //placeholder
+    
     color: '#cddc39'
 };
 
-const dummyProjectB = {
-    id: 'dummyB',
-    title : 'Dummy Project',
-    imageSrc : 'https://picsum.photos/500/500',
-    cardImageSrc: null,
-    description: 'some text ',
+const dodgeGame = {
+    id: 'dodgeGame',
+    title : 'Dodge Game',
+    overlayImageSrc : './img/project-images/dodge-game/overlay.png',
+    cardImageSrc: './img/project-images/dodge-game/card.png',
+    description: 'A simple dodge game made with HTML, SCSS and JS.',
     techUsed: [['html','fa-html5'],['css','fa-css3'],['javascript','fa-js']],
-    siteLink : '...',
-    githubLink: '...',
+    siteLink : 'https://dodge-game.vulirussell.io/',
+    githubLink: 'https://github.com/vuli-russell/dodge-game',
     gridArea: 'b',
-    //placeholder
     color: '#03a9f4'
 };
 
@@ -46,7 +45,7 @@ const dummyProjectC = {
 };
 
 
-const projects = [calculatorProject,dummyProjectB,dummyProjectC];
+const projects = [calculatorProject,dodgeGame,dummyProjectC];
 
 //html generation==============================================================================
 
