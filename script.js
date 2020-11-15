@@ -54,17 +54,17 @@ const projects = [
         gridArea: 'd',
     },
 
-    {
-        id: 'morseCodeTranslator',
-        title : 'Morse Code Translator',
-        overlayImageSrc : './img/project-images/morseCode/overlay.png',
-        cardImageSrc: './img/project-images/morseCode/card.png',
-        description: 'Morse Code Translator build in HTML, SCSS and JS',
-        techUsed: ['html','sass','javascript'],
-        siteLink : 'https://morse-code.vulirussell.io/',
-        githubLink: 'https://github.com/vuli-russell/morse-code-translator',
-        gridArea: 'e',
-    },
+    // {
+    //     id: 'morseCodeTranslator',
+    //     title : 'Morse Code Translator',
+    //     overlayImageSrc : './img/project-images/morseCode/overlay.png',
+    //     cardImageSrc: './img/project-images/morseCode/card.png',
+    //     description: 'Morse Code Translator build in HTML, SCSS and JS',
+    //     techUsed: ['html','sass','javascript'],
+    //     siteLink : 'https://morse-code.vulirussell.io/',
+    //     githubLink: 'https://github.com/vuli-russell/morse-code-translator',
+    //     gridArea: 'e',
+    // },
 
     {
         id: 'shiftReporter',
