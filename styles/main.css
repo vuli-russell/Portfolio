@@ -71,6 +71,10 @@ h3 {
   font-size: 20px;
 }
 
+i.extraIcon img {
+  height: 15px;
+}
+
 @media (min-width: 425px) {
   p, a {
     font-size: 18px;
@@ -86,6 +90,10 @@ h3 {
 
   h3 {
     font-size: 24px;
+  }
+
+  i.extraIcon img {
+    height: 18px;
   }
 }
 @media (min-width: 768px) {
@@ -103,6 +111,10 @@ h3 {
 
   h3 {
     font-size: 30px;
+  }
+
+  i.extraIcon img {
+    height: 22.5px;
   }
 }
 header canvas {
@@ -380,7 +392,7 @@ nav .nav-menu.nav-shown {
   main > section > .project-cards-container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-areas: "a a a b b b" "c c c c c c";
+    grid-template-areas: "f f f f f f" "d d d a a a" "c c c c c c" "e e e b b b";
     gap: 40px;
     margin: 40px 0;
   }

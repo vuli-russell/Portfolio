@@ -80,6 +80,12 @@ h3 {
     font-size: $sub-heading-size;
 }
 
+i.extraIcon {
+    img {
+        height: $text-size;
+    }
+}
+
 @media (min-width:$large-mobile-breakpoint){
     p,a {
         font-size: $text-size * 1.2;
@@ -95,6 +101,12 @@ h3 {
     
     h3 {
         font-size: $sub-heading-size * 1.2;
+    }
+
+    i.extraIcon {
+        img {
+            height: $text-size * 1.2;
+        }
     }
 }
 
@@ -113,5 +125,11 @@ h3 {
     
     h3 {
         font-size: $sub-heading-size * 1.5;
+    }
+
+    i.extraIcon {
+        img {
+            height: $text-size * 1.5;
+        }
     }
 }

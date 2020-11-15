@@ -3,49 +3,82 @@
 //project info
 //copy object. Grid areas must be added to definition in the css (_project-cards.scss media query ~ line 54)
 
-const calculatorProject = {
-    id: 'calculator',
-    title : 'JS Calculator',
-    overlayImageSrc : './img/project-images/calculator/overlay.png',
-    cardImageSrc: './img/project-images/calculator/card.png',
-    description: 'A basic calculator built using html Sass/CSS and javascript. Performs basic maths according to BODMAS and can accept variables as inputs.',
-    techUsed: [['html','fa-html5'],['sass','fa-sass'],['javascript','fa-js']],
-    siteLink : 'https://calculator.vulirussell.io/',
-    githubLink: 'https://github.com/vuli-russell/JS-calculator',
-    gridArea: 'a',
-    
-    color: '#cddc39'
-};
 
-const dodgeGame = {
-    id: 'dodgeGame',
-    title : 'Dodge Game',
-    overlayImageSrc : './img/project-images/dodge-game/overlay.png',
-    cardImageSrc: './img/project-images/dodge-game/card.png',
-    description: 'A simple dodge game made with HTML, SCSS and JS.',
-    techUsed: [['html','fa-html5'],['css','fa-css3'],['javascript','fa-js']],
-    siteLink : 'https://dodge-game.vulirussell.io/',
-    githubLink: 'https://github.com/vuli-russell/dodge-game',
-    gridArea: 'b',
-    color: '#03a9f4'
-};
+const projects = [
 
-const dummyProjectC = {
-    id: 'dummyC',
-    title : 'Dummy Project',
-    imageSrc : 'https://picsum.photos/500/500',
-    cardImageSrc: null,
-    description: 'some text ',
-    techUsed: [['html','fa-html5'],['css','fa-css3'],['javascript','fa-js']],
-    siteLink : '...',
-    githubLink: '...',
-    gridArea: 'c',
-    //placeholder
-    color: '#e91e63'
-};
+    {
+        id: 'calculator',
+        title : 'JS Calculator',
+        overlayImageSrc : './img/project-images/calculator/overlay.png',
+        cardImageSrc: './img/project-images/calculator/card.png',
+        description: 'A basic calculator built using html Sass/CSS and javascript. Performs basic maths according to BODMAS and can accept variables as inputs.',
+        techUsed: [['html','fa-html5'],['sass','fa-sass'],['javascript','fa-js']],
+        siteLink : 'https://calculator.vulirussell.io/',
+        githubLink: 'https://github.com/vuli-russell/JS-calculator',
+        gridArea: 'a',
+    },
 
+    {
+        id: 'dodgeGame',
+        title : 'Dodge Game',
+        overlayImageSrc : './img/project-images/dodge-game/overlay.png',
+        cardImageSrc: './img/project-images/dodge-game/card.png',
+        description: 'A simple dodge game made with HTML, SCSS and JS.',
+        techUsed: [['html','fa-html5'],['css','fa-css3'],['javascript','fa-js']],
+        siteLink : 'https://dodge-game.vulirussell.io/',
+        githubLink: 'https://github.com/vuli-russell/dodge-game',
+        gridArea: 'b',
+    },
 
-const projects = [calculatorProject,dodgeGame,dummyProjectC];
+    {
+        id: 'toDoList',
+        title : 'To Do List',
+        overlayImageSrc : '',
+        cardImageSrc: '',
+        description: 'A To Do List, built with React. To do Items stored on mongoDB and accessed via a nodeJS api. Login handled by Firebase Authentication',
+        techUsed: [],
+        siteLink : 'https://todolist.vulirussell.io/',
+        githubLink: 'https://github.com/vuli-russell/toDoSite',
+        gridArea: 'c',
+    },
+
+    {
+        id: 'brewdog',
+        title : 'Brewdog Catalogue',
+        overlayImageSrc : '',
+        cardImageSrc: '',
+        description: 'Gallery of Brewdogs beers pulled from punkAPI built in react. Search through beers and login with Google to save favourites.',
+        techUsed: [],
+        siteLink : 'https://brewdog.vulirussell.io/',
+        githubLink: 'https://github.com/vuli-russell/brewdogAPI',
+        gridArea: 'd',
+    },
+
+    {
+        id: 'morseCodeTranslator',
+        title : 'Morse Code Translator',
+        overlayImageSrc : '',
+        cardImageSrc: '',
+        description: 'Morse Code Translator build in HTML, SCSS and JS',
+        techUsed: [],
+        siteLink : 'https://brewdog.vulirussell.io/',
+        githubLink: 'https://github.com/vuli-russell/morse-code-translator',
+        gridArea: 'e',
+    },
+
+    {
+        id: 'shiftReporter',
+        title : 'Shift Reporter',
+        overlayImageSrc : '',
+        cardImageSrc: '',
+        description: 'MVP for a website to track work done across a Mine, aimed at the South African Mining industry. Completed project for a real Client as part of the _noloy Course. Built using react, with a firestore database and firebase authentication for user login.',
+        techUsed: [],
+        siteLink : 'https://shiftreporter-3420e.firebaseapp.com/',
+        githubLink: 'https://github.com/jackroy08/ShiftReporter',
+        gridArea: 'f',
+    }
+];
+
 
 //html generation==============================================================================
 
