@@ -58,7 +58,7 @@
         padding: 2vw 5vw;
         top: -40px;
 
-        img {
+         > img {
             object-fit: cover;
             object-position: top left;
             max-height: 35vh;
@@ -82,11 +82,19 @@
 
         ul {
             list-style-type: none;
-            margin: 5px 0;
+            margin: 20px 0;
 
             li {
                 margin: 5px 0;
                 font-size: $text-size;
+                display: inline;
+                padding: 0px 5px;
+                border: 2px solid white;
+                border-width: 0px 1px;
+
+                > p {
+                    display: inline;
+                }
             }
         }
 

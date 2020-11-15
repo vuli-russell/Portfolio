@@ -12,7 +12,7 @@ const projects = [
         overlayImageSrc : './img/project-images/calculator/overlay.png',
         cardImageSrc: './img/project-images/calculator/card.png',
         description: 'A basic calculator built using html Sass/CSS and javascript. Performs basic maths according to BODMAS and can accept variables as inputs.',
-        techUsed: [['html','fa-html5'],['sass','fa-sass'],['javascript','fa-js']],
+        techUsed: ['html','sass','javascript'],
         siteLink : 'https://calculator.vulirussell.io/',
         githubLink: 'https://github.com/vuli-russell/JS-calculator',
         gridArea: 'a',
@@ -24,7 +24,7 @@ const projects = [
         overlayImageSrc : './img/project-images/dodge-game/overlay.png',
         cardImageSrc: './img/project-images/dodge-game/card.png',
         description: 'A simple dodge game made with HTML, SCSS and JS.',
-        techUsed: [['html','fa-html5'],['css','fa-css3'],['javascript','fa-js']],
+        techUsed: ['html','sass','javascript'],
         siteLink : 'https://dodge-game.vulirussell.io/',
         githubLink: 'https://github.com/vuli-russell/dodge-game',
         gridArea: 'b',
@@ -33,10 +33,10 @@ const projects = [
     {
         id: 'toDoList',
         title : 'To Do List',
-        overlayImageSrc : '',
-        cardImageSrc: '',
+        overlayImageSrc : './img/project-images/toDoList/overlay.png',
+        cardImageSrc: './img/project-images/toDoList/card.png',
         description: 'A To Do List, built with React. To do Items stored on mongoDB and accessed via a nodeJS api. Login handled by Firebase Authentication',
-        techUsed: [],
+        techUsed: ['react','sass','javascript',"firebase","nodejs","mongodb","express"],
         siteLink : 'https://todolist.vulirussell.io/',
         githubLink: 'https://github.com/vuli-russell/toDoSite',
         gridArea: 'c',
@@ -45,10 +45,10 @@ const projects = [
     {
         id: 'brewdog',
         title : 'Brewdog Catalogue',
-        overlayImageSrc : '',
-        cardImageSrc: '',
+        overlayImageSrc : './img/project-images/brewdog-api/overlay.png',
+        cardImageSrc: './img/project-images/brewdog-api/card.png',
         description: 'Gallery of Brewdogs beers pulled from punkAPI built in react. Search through beers and login with Google to save favourites.',
-        techUsed: [],
+        techUsed: ['react','sass','javascript',"firebase"],
         siteLink : 'https://brewdog.vulirussell.io/',
         githubLink: 'https://github.com/vuli-russell/brewdogAPI',
         gridArea: 'd',
@@ -57,11 +57,11 @@ const projects = [
     {
         id: 'morseCodeTranslator',
         title : 'Morse Code Translator',
-        overlayImageSrc : '',
-        cardImageSrc: '',
+        overlayImageSrc : './img/project-images/morseCode/overlay.png',
+        cardImageSrc: './img/project-images/morseCode/card.png',
         description: 'Morse Code Translator build in HTML, SCSS and JS',
-        techUsed: [],
-        siteLink : 'https://brewdog.vulirussell.io/',
+        techUsed: ['html','sass','javascript'],
+        siteLink : 'https://morse-code.vulirussell.io/',
         githubLink: 'https://github.com/vuli-russell/morse-code-translator',
         gridArea: 'e',
     },
@@ -69,10 +69,10 @@ const projects = [
     {
         id: 'shiftReporter',
         title : 'Shift Reporter',
-        overlayImageSrc : '',
-        cardImageSrc: '',
+        overlayImageSrc : './img/project-images/shiftReporter/overlay.png',
+        cardImageSrc: './img/project-images/shiftReporter/card.png',
         description: 'MVP for a website to track work done across a Mine, aimed at the South African Mining industry. Completed project for a real Client as part of the _noloy Course. Built using react, with a firestore database and firebase authentication for user login.',
-        techUsed: [],
+        techUsed: ['react','sass','javascript',"firebase"],
         siteLink : 'https://shiftreporter-3420e.firebaseapp.com/',
         githubLink: 'https://github.com/jackroy08/ShiftReporter',
         gridArea: 'f',
@@ -149,11 +149,8 @@ const generateProjectOverlays = (projectArray,container) => {
         const ul  = document.createElement('ul')
         
         project.techUsed.forEach(tech=>{
-            const li = document.createElement('li');
-            li.innerText = tech[0];
-            const i = document.createElement('i');
-            i.classList.add('fab',tech[1]);
-            li.append(i);
+            const li = document.createElement('li')
+            li.innerHTML = `<p>${tech}<i class="extraIcon"><img src="./img/skillsIcons/${tech}.svg" alt=""></i></p>`;
             ul.append(li);
         });
 

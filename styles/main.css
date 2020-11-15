@@ -386,6 +386,7 @@ nav .nav-menu.nav-shown {
 .project-cards-container > article div h3 {
   width: 100%;
   font-weight: 100;
+  padding-right: 30px;
 }
 
 @media (min-width: 768px) {
@@ -458,7 +459,7 @@ nav .nav-menu.nav-shown {
   padding: 2vw 5vw;
   top: -40px;
 }
-.project-details .project-details-content-container img {
+.project-details .project-details-content-container > img {
   object-fit: cover;
   object-position: top left;
   max-height: 35vh;
@@ -477,11 +478,18 @@ nav .nav-menu.nav-shown {
 }
 .project-details .project-details-content-container ul {
   list-style-type: none;
-  margin: 5px 0;
+  margin: 20px 0;
 }
 .project-details .project-details-content-container ul li {
   margin: 5px 0;
   font-size: 15px;
+  display: inline;
+  padding: 0px 5px;
+  border: 2px solid white;
+  border-width: 0px 1px;
+}
+.project-details .project-details-content-container ul li > p {
+  display: inline;
 }
 .project-details .project-details-content-container a {
   color: white;
