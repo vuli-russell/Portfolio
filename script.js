@@ -7,27 +7,15 @@
 const projects = [
 
     {
-        id: 'calculator',
-        title : 'JS Calculator',
-        overlayImageSrc : './img/project-images/calculator/overlay.png',
-        cardImageSrc: './img/project-images/calculator/card.png',
-        description: 'A basic calculator built using html Sass/CSS and javascript. Performs basic maths according to BODMAS and can accept variables as inputs.',
-        techUsed: ['html','sass','javascript'],
-        siteLink : 'https://calculator.vulirussell.io/',
-        githubLink: 'https://github.com/vuli-russell/JS-calculator',
-        gridArea: 'a',
-    },
-
-    {
-        id: 'dodgeGame',
-        title : 'Dodge Game',
-        overlayImageSrc : './img/project-images/dodge-game/overlay.png',
-        cardImageSrc: './img/project-images/dodge-game/card.png',
-        description: 'A simple dodge game made with HTML, SCSS and JS.',
-        techUsed: ['html','sass','javascript'],
-        siteLink : 'https://dodge-game.vulirussell.io/',
-        githubLink: 'https://github.com/vuli-russell/dodge-game',
-        gridArea: 'b',
+        id: 'shiftReporter',
+        title : 'Shift Reporter',
+        overlayImageSrc : './img/project-images/shiftReporter/overlay.png',
+        cardImageSrc: './img/project-images/shiftReporter/card.png',
+        description: 'MVP for a website to track work done across a Mine, aimed at the South African Mining industry. Completed project for a real Client as part of the _noloy Course. Built using react, with a firestore database and firebase authentication for user login.',
+        techUsed: ['react','sass','javascript',"firebase"],
+        siteLink : 'https://shiftreporter-3420e.firebaseapp.com/',
+        githubLink: 'https://github.com/jackroy08/ShiftReporter',
+        gridArea: 'f',
     },
 
     {
@@ -53,6 +41,33 @@ const projects = [
         githubLink: 'https://github.com/vuli-russell/brewdogAPI',
         gridArea: 'd',
     },
+    
+    {
+        id: 'calculator',
+        title : 'JS Calculator',
+        overlayImageSrc : './img/project-images/calculator/overlay.png',
+        cardImageSrc: './img/project-images/calculator/card.png',
+        description: 'A basic calculator built using html Sass/CSS and javascript. Performs basic maths according to BODMAS and can accept variables as inputs.',
+        techUsed: ['html','sass','javascript'],
+        siteLink : 'https://calculator.vulirussell.io/',
+        githubLink: 'https://github.com/vuli-russell/JS-calculator',
+        gridArea: 'a',
+    },
+
+    {
+        id: 'dodgeGame',
+        title : 'Dodge Game',
+        overlayImageSrc : './img/project-images/dodge-game/overlay.png',
+        cardImageSrc: './img/project-images/dodge-game/card.png',
+        description: 'A simple dodge game made with HTML, SCSS and JS.',
+        techUsed: ['html','sass','javascript'],
+        siteLink : 'https://dodge-game.vulirussell.io/',
+        githubLink: 'https://github.com/vuli-russell/dodge-game',
+        gridArea: 'b',
+    },
+
+
+
 
     // {
     //     id: 'morseCodeTranslator',
@@ -66,17 +81,7 @@ const projects = [
     //     gridArea: 'e',
     // },
 
-    {
-        id: 'shiftReporter',
-        title : 'Shift Reporter',
-        overlayImageSrc : './img/project-images/shiftReporter/overlay.png',
-        cardImageSrc: './img/project-images/shiftReporter/card.png',
-        description: 'MVP for a website to track work done across a Mine, aimed at the South African Mining industry. Completed project for a real Client as part of the _noloy Course. Built using react, with a firestore database and firebase authentication for user login.',
-        techUsed: ['react','sass','javascript',"firebase"],
-        siteLink : 'https://shiftreporter-3420e.firebaseapp.com/',
-        githubLink: 'https://github.com/jackroy08/ShiftReporter',
-        gridArea: 'f',
-    }
+
 ];
 
 

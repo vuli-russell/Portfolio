@@ -165,6 +165,7 @@ nav .nav-overlay {
   height: 0;
   width: 100%;
   background-color: transparent;
+  z-index: 1;
 }
 nav .nav-menu {
   position: fixed;
@@ -180,6 +181,7 @@ nav .nav-menu {
   transition: all 0.4s ease-in;
   transform: scaleY(0) scaleX(0);
   transform-origin: 100% 100% 0;
+  z-index: 2;
 }
 nav .nav-menu a {
   padding: 10px 20px;
