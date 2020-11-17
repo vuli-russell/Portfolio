@@ -47,7 +47,7 @@ const projects = [
         title : 'JS Calculator',
         overlayImageSrc : './img/project-images/calculator/overlay.png',
         cardImageSrc: './img/project-images/calculator/card.png',
-        description: 'A basic calculator built using html Sass/CSS and javascript. Performs basic maths according to BODMAS and can accept variables as inputs.',
+        description: 'A basic calculator built using html Sass/CSS and javascript. Performs basic maths according to BODMAS and can accept variables as inputs. Note that this relies on regex lookbehinds to function, so doesnt run on Safari.',
         techUsed: ['html','sass','javascript'],
         siteLink : 'https://calculator.vulirussell.io/',
         githubLink: 'https://github.com/vuli-russell/JS-calculator',
